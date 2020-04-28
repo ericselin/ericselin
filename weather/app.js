@@ -14,8 +14,30 @@ const getTemp = async (position) => {
   resp = await fetch(`https://api.openweathermap.org/data/2.5/onecall/timemachine?dt=${yesterdayUnix}&lat=${position.coords.latitude}&lon=${position.coords.longitude}&units=metric&appid=1f4885debc672bf3b3a91ade95a24c29`);
   const y = await resp.json();
 
-  document.getElementById('temp').innerText = forecast.current.feels_like;
-  document.getElementById('yesterday').innerText = y.current.feels_like;
+  const todayTemp = forecast.current.feels_like;
+  const yesterdayTemp = y.current.feels_like;
+  /** @type {number} */
+  const diff = todayTemp - yesterdayTemp;
+  const icon = document.querySelector('h1');
+  const sub = document.querySelector('h2');
+  const p = document.querySelector('p');
+  if (diff > 0.5) {
+    icon.innerText = '🥵';
+    sub.innerText = 'Warmer';
+  }
+  else if (diff < -0.5) {
+    icon.innerText = '🥶';
+    sub.innerText = 'Colder';
+  }
+  else {
+    icon.innerText = '😇';
+    sub.innerText = 'Similar';
+  }
+  p.innerHTML = `Today it feels like ${todayTemp.toFixed(1)}°C
+    <br>Yesterday it felt like ${yesterdayTemp.toFixed(1)}°C`;
+
+  console.log(forecast);
+  console.log(y);
 };
 
 const refresh = () => {
