@@ -1,0 +1,14 @@
+---
+layout: base.hbs
+---
+
+<main>
+  {{#each collections.experiment}}
+  <div class="airy">
+    {{{this.templateContent}}}
+    <a class="" href="{{this.url}}..">
+      🔥 See it in action 🔥
+    </a>
+  </div>
+  {{/each}}
+</main>

@@ -1,3 +1,8 @@
+---
+tags: experiment
+layout: default.hbs
+---
+
 # Google Cast demo
 
 Google Cast is pretty cool. Especially Chromecast, of course. You can cast pretty much any media 

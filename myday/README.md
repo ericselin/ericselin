@@ -1,3 +1,8 @@
+---
+tags: experiment
+layout: default.hbs
+---
+
 # Myday
 
 See your Google calendar events for today.
