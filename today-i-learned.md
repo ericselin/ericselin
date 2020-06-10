@@ -41,3 +41,43 @@ External JS also slows down LCP a lot, even though it's async. Need to investiga
 Rollup creates a chunk of imported files if it's imported from many entry points.
 
 *3.6.2020*
+
+# CMS organization
+
+Things you want from a CMS: scale. Scale in terms of what? Reusability. This is slightly difficult to attain in practice, though. For a headless ecom site, for instance, you need a checkout with the products (Shopify), the store content (CMS 1), and possibly some brand / shared content (CMS 2). All of these get input from a media bank, a PIM, and what not. Impossible to centralize for reusability. Or consistency, or auditability.
+
+So what's wrong with having stuff in different places? Nothing, if the content is logically separated anyway. SSO is the only benefit, and a very small one at that. Having to change "spaces" or whatever instead of navigating to a different site when editing different kinds of content is even smaller (remember, brand content and ecom site content are anyway completely different "contexts").
+
+# forestry.io, content organization and (hu)go modules
+
+So should you do mono- or multirepo for ecom sites with different content but the same layout?
+
+## Monorepo
+
+Pros:
+- Easier dependency management, especially when working on the layouts and code.
+- Ability to share content and media in forestry.
+
+Cons:
+- Preview in forestry needs to be done via a special proxy server.
+- Sidebar in forestry might get messy, and logically these are different sites.
+
+What could be possible is to create two different sites from the same repo. For instance "us" and "ca". However, since *all* the settings will be shared, including site preview and sidebar settings, this doesn't work.
+
+## Multirepo
+
+Pros:
+- Easy access management per repo.
+- Logically separate sites have separate err... sites in forestry.
+
+Cons:
+- Updating dependencies on updates becomes harder.
+- Sharing frontmatter templates in forestry is really hard.
+- No media or content sharing (cannot edit git submodules in forestry).
+
+## Specific highlights related to go modules
+
+- hugo modules work in forestry preview
+- hugo modules `replace` doesn't seem to work for subdirectories of a git repo
+
+*10.6.2020*
