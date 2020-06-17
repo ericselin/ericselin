@@ -81,3 +81,52 @@ Cons:
 - hugo modules `replace` doesn't seem to work for subdirectories of a git repo
 
 *10.6.2020*
+
+# Typescript can do anything
+
+So, say you want to create a function that groups an array into an object by some key and puts the array part into another key. Sounds weird, but it's simple:
+
+```js
+// original array
+const arr = [
+  { key: 'a', hello: 'world' },
+  { key: 'b', hello: 'there' },
+  { key: 'a', hello: 'you' }
+];
+
+group(arr, 'key', 'prop');
+
+// new object
+const result = {
+  a: {
+    prop: [
+      { key: 'a', hello: 'world' },
+      { key: 'a', hello: 'you' }     
+    ]
+  },
+  b: {
+    prop: [
+      { key: 'b', hello: 'there' }     
+    ]
+  }
+}
+```
+
+Trust me, there are legitimate use cases for this! Anyway, using TS, you can type check the function based on what you're trying to do:
+
+1. First argument should be an array of any type, let's call the type T.
+2. Second argument should be the string representation of a key of type T.
+3. Third argument specifies the property name of the returned (sub)object, visible in the resulting return type.
+
+To achieve this:
+
+```ts
+function group<T, K extends keyof T, PropName extends string>
+  (array: T[], key: K, prop: PropName): {
+    [key: string]: {
+      [P in PropName]: T[]
+    }
+  }
+```
+
+This works flawlessly in type checking and IntelliSense. This uses [generics](https://www.typescriptlang.org/docs/handbook/generics.html) and [mapped types](https://www.typescriptlang.org/docs/handbook/advanced-types.html#mapped-types) and is pretty darn cool!
