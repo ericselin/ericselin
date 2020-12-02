@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "eleventy --output=docs",
+    "start": "eleventy --serve --output=docs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

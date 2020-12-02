@@ -1,0 +1,107 @@
+<h1>Gotchas when using custom elements in production</h1>
+<p>HTML and CSS needs to be included somehow. The best case is to have the html &quot;template&quot; ready the way it should look, and then just define the custom element, but for encapsulation and usage in other frameworks, you might consider:</p>
+<ul>
+<li>External file(s): loading the HTML via a loader (webpack / parcel / etc)</li>
+<li>Inside JS: use template strings in the js file, possibly with an IDE plugin for language services</li>
+</ul>
+<p>Remember, global css doesn't work inside a shadow root. There are no perfect solutions for this:</p>
+<ul>
+<li><code>&lt;link&gt;</code> elements download the stylesheet many times if inserted dynamically</li>
+<li>SASS includes require additional building</li>
+</ul>
+<p>One option is not to use a shadow root in cases with heavy global styling.</p>
+<p><em>1.6.2020</em></p>
+<h1>CSS Modules</h1>
+<p>Parcel parses style tags as well, transforming style tags inside loaded html files with CSS Modules (if enabled!). In order to use styles normally in e.g. a shadow root, mark the selector as global with <code>:global</code>.</p>
+<p><em>1.6.2020</em></p>
+<h1>Google Calendar on mobile</h1>
+<p>Tasks are not visible in the mobile calendar. Neither are cal feeds (those under &quot;other calendars&quot; on desktop).</p>
+<p><em>1.6.2020</em></p>
+<h1>WebVitals are brutal</h1>
+<p>Need to pay very close attention to LCP! Hero images are particularly crucial here.</p>
+<p>External (async!) CSS slows down LCP from 1.6s to 3.1s on Reima US (small sample!). Putting everything in the internal CSS takes it to 1.7s.</p>
+<p>External JS also slows down LCP a lot, even though it's async. Need to investigate further, but now it seems impossible to get a perfect Lighthouse score with any JS.</p>
+<p><em>2.6.2020</em></p>
+<h1>Rollup chunks</h1>
+<p>Rollup creates a chunk of imported files if it's imported from many entry points.</p>
+<p><em>3.6.2020</em></p>
+<h1>CMS organization</h1>
+<p>Things you want from a CMS: scale. Scale in terms of what? Reusability. This is slightly difficult to attain in practice, though. For a headless ecom site, for instance, you need a checkout with the products (Shopify), the store content (CMS 1), and possibly some brand / shared content (CMS 2). All of these get input from a media bank, a PIM, and what not. Impossible to centralize for reusability. Or consistency, or auditability.</p>
+<p>So what's wrong with having stuff in different places? Nothing, if the content is logically separated anyway. SSO is the only benefit, and a very small one at that. Having to change &quot;spaces&quot; or whatever instead of navigating to a different site when editing different kinds of content is even smaller (remember, brand content and ecom site content are anyway completely different &quot;contexts&quot;).</p>
+<h1>forestry.io, content organization and (hu)go modules</h1>
+<p>So should you do mono- or multirepo for ecom sites with different content but the same layout?</p>
+<h2>Monorepo</h2>
+<p>Pros:</p>
+<ul>
+<li>Easier dependency management, especially when working on the layouts and code.</li>
+<li>Ability to share content and media in forestry.</li>
+</ul>
+<p>Cons:</p>
+<ul>
+<li>Preview in forestry needs to be done via a special proxy server.</li>
+<li>Sidebar in forestry might get messy, and logically these are different sites.</li>
+</ul>
+<p>What could be possible is to create two different sites from the same repo. For instance &quot;us&quot; and &quot;ca&quot;. However, since <em>all</em> the settings will be shared, including site preview and sidebar settings, this doesn't work.</p>
+<h2>Multirepo</h2>
+<p>Pros:</p>
+<ul>
+<li>Easy access management per repo.</li>
+<li>Logically separate sites have separate err... sites in forestry.</li>
+</ul>
+<p>Cons:</p>
+<ul>
+<li>Updating dependencies on updates becomes harder.</li>
+<li>Sharing frontmatter templates in forestry is really hard.</li>
+<li>No media or content sharing (cannot edit git submodules in forestry).</li>
+</ul>
+<h2>Specific highlights related to go modules</h2>
+<ul>
+<li>hugo modules work in forestry preview</li>
+<li>hugo modules <code>replace</code> doesn't seem to work for subdirectories of a git repo</li>
+</ul>
+<p><em>10.6.2020</em></p>
+<h1>Typescript can do anything</h1>
+<p>So, say you want to create a function that groups an array into an object by some key and puts the array part into another key. Sounds weird, but it's simple:</p>
+<pre><code class="language-js">// original array
+const arr = [
+  { key: 'a', hello: 'world' },
+  { key: 'b', hello: 'there' },
+  { key: 'a', hello: 'you' }
+];
+
+group(arr, 'key', 'prop');
+
+// new object
+const result = {
+  a: {
+    prop: [
+      { key: 'a', hello: 'world' },
+      { key: 'a', hello: 'you' }     
+    ]
+  },
+  b: {
+    prop: [
+      { key: 'b', hello: 'there' }     
+    ]
+  }
+}
+</code></pre>
+<p>Trust me, there are legitimate use cases for this! Anyway, using TS, you can type check the function based on what you're trying to do:</p>
+<ol>
+<li>First argument should be an array of any type, let's call the type T.</li>
+<li>Second argument should be the string representation of a key of type T.</li>
+<li>Third argument specifies the property name of the returned (sub)object, visible in the resulting return type.</li>
+</ol>
+<p>To achieve this:</p>
+<pre><code class="language-ts">function group&lt;T, K extends keyof T, PropName extends string&gt;
+  (array: T[], key: K, prop: PropName): {
+    [key: string]: {
+      [P in PropName]: T[]
+    }
+  }
+</code></pre>
+<p>This works flawlessly in type checking and IntelliSense. This uses <a href="https://www.typescriptlang.org/docs/handbook/generics.html">generics</a> and <a href="https://www.typescriptlang.org/docs/handbook/advanced-types.html#mapped-types">mapped types</a> and is pretty darn cool!</p>
+<h1>Ditching the online store in Shopify is hard</h1>
+<p>Shopify apps use products for different things, e.g. sending out emails after purchase and syncing products with data feeds of different sorts. This becomes pretty hard to manage when the &quot;online store&quot; is a separate static site and not the default Shopify version. One needs to carefully migrate apps and services to use URLs from the new site, and delete apps which only relate to the frontend.</p>
+<p>While the online store cannot be deleted (on plans higher than &quot;Lite&quot;), it's possible to password protect the site, or <code>noindex</code> the whole site. Regardless of the method used, no apps should use the &quot;online store URLs&quot; from Shopify. This is especially important so that search engines don't get a hold of the deprecated URLs.</p>
+<p><strong>This migration needs to be part of the overall strategy.</strong></p>
