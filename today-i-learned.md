@@ -130,3 +130,11 @@ function group<T, K extends keyof T, PropName extends string>
 ```
 
 This works flawlessly in type checking and IntelliSense. This uses [generics](https://www.typescriptlang.org/docs/handbook/generics.html) and [mapped types](https://www.typescriptlang.org/docs/handbook/advanced-types.html#mapped-types) and is pretty darn cool!
+
+# Ditching the online store in Shopify is hard
+
+Shopify apps use products for different things, e.g. sending out emails after purchase and syncing products with data feeds of different sorts. This becomes pretty hard to manage when the "online store" is a separate static site and not the default Shopify version. One needs to carefully migrate apps and services to use URLs from the new site, and delete apps which only relate to the frontend.
+
+While the online store cannot be deleted (on plans higher than "Lite"), it's possible to password protect the site, or `noindex` the whole site. Regardless of the method used, no apps should use the "online store URLs" from Shopify. This is especially important so that search engines don't get a hold of the deprecated URLs.
+
+**This migration needs to be part of the overall strategy.**
