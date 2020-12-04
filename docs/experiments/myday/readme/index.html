@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>I&#39;m Eric, and I&#39;m a developer | ericselin.dev</title>
+  <link href="https://fonts.googleapis.com/css?family=Fira+Code:300,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+
+<body>
+  <header>
+    <a href="/">//eric</a>
+    <ul>
+      <li><a href="/blog/">Blog</a></li>
+      <li><a href="/experiments/">Experiments</a></li>
+    </ul>
+  </header>
+  
+<main>
+  
+  <h1 id="myday">Myday</h1>
+<p>See your Google calendar events for today.</p>
+<p><a href="https://myday.ericselin.dev">Working domain</a></p>
+<h2 id="requirements">Requirements</h2>
+<ul>
+<li>Google Cloud Platform project with Calendar API enabled</li>
+<li>API key and OAuth client for the project</li>
+<li>Private top-level domain for hosting (see note below)</li>
+</ul>
+<p>Note: You need to authorize the OAuth client for a particular URL.
+This URL needs to be on a whitelisted domain, which in turn needs
+to be a private top-level domain.</p>
+<p>This project also showcases using Google Sign-In to request for
+additional permissions on demand (incremental authorization). Note
+that it&rsquo;s apparently not possible to bypass the account selection
+when doing this.</p>
+<p><strong>The Calendar API is restricted and requires validation by Google
+before usage. It still works without validation, but shows a very
+scary warning.</strong></p>
+<p><a href="https://developers.google.com/calendar/quickstart/js">Quick start docs</a></p>
+
+</main>
+
+  <footer>
+    There's no such thing as the cloud - it's just someone else's computer.
+  </footer>
+</body>
+
+</html>

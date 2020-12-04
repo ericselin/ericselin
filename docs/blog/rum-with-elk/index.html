@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>I'm Eric, and I'm a developer</title>
+  <title>Web vitals real user monitoring with Elasticsearch and Kibana | ericselin.dev</title>
   <link href="https://fonts.googleapis.com/css?family=Fira+Code:300,700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/style.css" />
 </head>
@@ -14,16 +14,19 @@
   <header>
     <a href="/">//eric</a>
     <ul>
+      <li><a href="/blog/">Blog</a></li>
       <li><a href="/experiments/">Experiments</a></li>
     </ul>
   </header>
   
 <main>
+  
   <h1>Web vitals real user monitoring with Elasticsearch and Kibana</h1>
-<p>Elasticsearch is awesome. I had it on my &quot;things to learn&quot; list for quite a while, and I finally got to it when an ecommerce site I'm working on needed some real user monitoring (RUM) to make sure performance stays superb. This is the story of how easy this was to set up with Elasticsearch and Kibana (ELK - or at least EK).</p>
-<p>Web vitals is a term for some new metrics surrounding site usability. There are three &quot;core&quot; web vitals metrics: Largest Contentful Paint, First Input Delay and Cumulative Layout Shift. These represent the percieved loading time, interactivity and layout stability. All super critical, and all super annoying if you get them wrong. I won't write more than that about these, so if you're not familiar with them, you'll benefit from <a href="https://web.dev/web-vitals">reading up a little bit</a>.</p>
-<p>If you're not optimizing your site for performance, you need to do that now. And I really mean now in a literal sense. Performance impacts organic search, paid ads, and all kinds of business metrics. And most importantly, it impacts your users. Please respect your users. The importance of performance is the topic of another blog post, but I really needed to get that said.</p>
-<p>These are the steps I took in order to get an awesome dashboard of the core web vitals in the field, complete with histograms and percentile gauges of Google's recommended performance values:</p>
+  
+  <p>Elasticsearch is awesome. I had it on my &ldquo;things to learn&rdquo; list for quite a while, and I finally got to it when an ecommerce site I&rsquo;m working on needed some real user monitoring (RUM) to make sure performance stays superb. This is the story of how easy this was to set up with Elasticsearch and Kibana (ELK - or at least EK).</p>
+<p>Web vitals is a term for some new metrics surrounding site usability. There are three &ldquo;core&rdquo; web vitals metrics: Largest Contentful Paint, First Input Delay and Cumulative Layout Shift. These represent the percieved loading time, interactivity and layout stability. All super critical, and all super annoying if you get them wrong. I won&rsquo;t write more than that about these, so if you&rsquo;re not familiar with them, you&rsquo;ll benefit from <a href="https://web.dev/web-vitals">reading up a little bit</a>.</p>
+<p>If you&rsquo;re not optimizing your site for performance, you need to do that now. And I really mean now in a literal sense. Performance impacts organic search, paid ads, and all kinds of business metrics. And most importantly, it impacts your users. Please respect your users. The importance of performance is the topic of another blog post, but I really needed to get that said.</p>
+<p>These are the steps I took in order to get an awesome dashboard of the core web vitals in the field, complete with histograms and percentile gauges of Google&rsquo;s recommended performance values:</p>
 <ol>
 <li>Sign up at a cloud ELK provider</li>
 <li>Create your deployment and an API key</li>
@@ -33,6 +36,7 @@
 </ol>
 
 </main>
+
   <footer>
     There's no such thing as the cloud - it's just someone else's computer.
   </footer>

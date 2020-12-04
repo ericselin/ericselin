@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog posts on I&#39;m Eric, and I&#39;m a developer</title>
+    <link>/blog/</link>
+    <description>Recent content in Blog posts on I&#39;m Eric, and I&#39;m a developer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 05 Jun 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Web vitals real user monitoring with Elasticsearch and Kibana</title>
+      <link>/blog/rum-with-elk/</link>
+      <pubDate>Fri, 05 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/rum-with-elk/</guid>
+      <description>Elasticsearch is awesome. I had it on my &amp;ldquo;things to learn&amp;rdquo; list for quite a while, and I finally got to it when an ecommerce site I&amp;rsquo;m working on needed some real user monitoring (RUM) to make sure performance stays superb. This is the story of how easy this was to set up with Elasticsearch and Kibana (ELK - or at least EK).
+Web vitals is a term for some new metrics surrounding site usability.</description>
+    </item>
+    
+  </channel>
+</rss>

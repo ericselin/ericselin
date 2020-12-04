@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Experiments on I&#39;m Eric, and I&#39;m a developer</title>
+    <link>/experiments/</link>
+    <description>Recent content in Experiments on I&#39;m Eric, and I&#39;m a developer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	<atom:link href="/experiments/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>/experiments/castme/readme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/experiments/castme/readme/</guid>
+      <description>Google Cast demo Google Cast is pretty cool. Especially Chromecast, of course. You can cast pretty much any media on this super cheap device. But even better, you can build your own apps that run on the Chromecast.
+To build an app, you need to create:
+ A &amp;ldquo;sender&amp;rdquo; app which controls the casting A &amp;ldquo;receiver&amp;rdquo; app that runs on the Chromecast  Also, to test all of this in development, you need to register your device for development (super easy!</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/experiments/dragger/readme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/experiments/dragger/readme/</guid>
+      <description>dragger A study in dragging and dropping in the browser.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/experiments/editmyfile/readme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/experiments/editmyfile/readme/</guid>
+      <description>Simple text editor This is a test of the Filesystem API. It&amp;rsquo;s a very simple text editor. Use at your own risk&amp;hellip; 😏
+The Filesystem API is freaking amazing. With it you can magically open local files and also save them back! The API is in &amp;ldquo;Origin trial&amp;rdquo; from Chrome 78 onwards, and available as a flag in previous versions.
+The API is pretty damn cool, if you ask me. This is a quite nice looking text editor with a contenteditable pre tag, and the code is not many lines long.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/experiments/myday/readme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/experiments/myday/readme/</guid>
+      <description>Myday See your Google calendar events for today.
+Working domain
+Requirements  Google Cloud Platform project with Calendar API enabled API key and OAuth client for the project Private top-level domain for hosting (see note below)  Note: You need to authorize the OAuth client for a particular URL. This URL needs to be on a whitelisted domain, which in turn needs to be a private top-level domain.
+This project also showcases using Google Sign-In to request for additional permissions on demand (incremental authorization).</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/experiments/weather/readme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/experiments/weather/readme/</guid>
+      <description>PWA Weather App An installable PWA that shows todays weather compared to yesterday.</description>
+    </item>
+    
+  </channel>
+</rss>
