@@ -1,5 +1,4 @@
 ---
-draft: true
 date: 2020-12-04
 title: Your website is not an app 🙄
 ---
