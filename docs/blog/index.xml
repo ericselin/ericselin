@@ -5,10 +5,20 @@
     <link>/blog/</link>
     <description>Recent content in Blog posts on I&#39;m Eric, and I&#39;m a developer</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 05 Jun 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 04 Dec 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Your website is not an app 🙄</title>
+      <link>/blog/your-website-is-not-an-app/</link>
+      <pubDate>Fri, 04 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/your-website-is-not-an-app/</guid>
+      <description>We made everything too complicated. We do this, us developers. It&amp;rsquo;s fun to invent a new and better way to do things. And to use all the &amp;ldquo;new things&amp;rdquo;. But I think this is the time to stop and think about what we are doing. One of those things is treating every website like an app - although most sites are nothing of the sort.
+The web was designed for documents The World Wide Web (www) was designed to be a collection of documents that could be linked together.</description>
+    </item>
     
     <item>
       <title>Web vitals real user monitoring with Elasticsearch and Kibana</title>
