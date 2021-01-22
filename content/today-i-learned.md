@@ -138,3 +138,27 @@ Shopify apps use products for different things, e.g. sending out emails after pu
 While the online store cannot be deleted (on plans higher than "Lite"), it's possible to password protect the site, or `noindex` the whole site. Regardless of the method used, no apps should use the "online store URLs" from Shopify. This is especially important so that search engines don't get a hold of the deprecated URLs.
 
 **This migration needs to be part of the overall strategy.**
+
+# Elixir is awesome, but suitable for specific things
+
+Elixir is a pretty neat language indeed! The language itself has many great advantages:
+
+- Functional programming
+  This is at the core of Elixir. I've grown to like functional programming quite a lot, so this is awesome.
+- Pattern matching
+  Overloading functions based not only on the number (and possibly type) of arguments (this is called airity), but the values of those arguments. Like an if statement for overloading.
+- Great metaprogramming
+  Macros are pretty great and allow you to customize the language basically in any way you like. Pretty complicated stuff, though.
+- Mature ecosystem and runtime
+  The Erlang runtime (BEAM) has a ton of advanced functionality, like concurrency, distributed computing, and hot code swapping.
+
+The big but (one T) is that, like most languages, it has its pretty specific use cases. Since Erlang was built for highly distributed, concurrent, and fault tolerant telecom network systems, this is the sweet spot. With Phoenix you can take these advantages to the web, but again in pretty specific use cases. A simple CLI tool is not a great fit. Choose the right language for the right task!
+
+Some things to look out for:
+
+- The big one: complexity
+  In order to be productive, you have to learn how Elixir/Erlang does stuff, how all the libraries work, how `mix` works, how to release stuff. Not very different from any other language, sure. But compare this with a scripting language for doing simple things.
+- Tooling
+  The tooling around Elixir/Erlang is awesome indeed, but for instance VSCode is pretty focused on web development, and the support for Elixir is not as good as support for TypeScript. E.g. renaming functions and code navigation is not there.
+
+Elixir is a very cool language based on very cool tech with very cool capabilities. It's just a matter of finding a project that needs all the nice things it offers.
