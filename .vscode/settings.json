@@ -1,5 +1,6 @@
 {
   "files.associations": {
     "*.html": "handlebars"
-  }
+  },
+  "deno.enable": true
 }
