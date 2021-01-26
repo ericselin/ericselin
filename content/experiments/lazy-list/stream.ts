@@ -14,6 +14,12 @@ export const lazy = () => {
       return self;
     },
     /**
+     * Execute the given function for each generator value
+     */
+    each: (fn: OneArgFunction) => {
+      return self;
+    },
+    /**
      * Run pipeline with the values from the generator sequentially
      */
     run: async (asyncGenerator: AsyncGenerator) => {
