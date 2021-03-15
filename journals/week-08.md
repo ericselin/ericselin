@@ -28,8 +28,8 @@ Consolidate hosting and builds to Netlify. Check yarn packages and port over alg
 - [ ] check na workflows, fix yarn root package.json, test netlify
 
 DONE: Update algolia after netlify publish plugin
-**TODO**: Caching resources fetched from Netlify
-**TODO**: Collection importer from storefront api
+PROCESSED: Caching resources fetched from Netlify
+PROCESSED: Collection importer from storefront api
 
 ## Wednesday - Optimal build infra for JP
 

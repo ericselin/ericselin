@@ -27,8 +27,8 @@ Remember to write today i learned if there is something important to learn!
 
 **TIL**: Deno http module server `Request` and `Response` are not the same as those in the Web API.
 
-**TODO**: Add page and host to experiment reporting.
-**TODO**: Create A/B reporting view in Kibana.
+PROCESSED: Add page and host to experiment reporting.
+PROCESSED: Create A/B reporting view in Kibana.
 DONE: Update Klarna banner learn more link.
 
 ## Tuesday - AB reporting research
@@ -59,7 +59,7 @@ DONE: Update Klarna banner learn more link.
 - [ ] test on demo
 - [ ] release on all sites
 
-**TODO**: Withdrawing consent
+PROCESSED: Withdrawing consent
 DONE: Setting cookie server-side does not work
 
 ## Thursday - GDPR day
