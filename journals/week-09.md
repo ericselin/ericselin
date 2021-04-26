@@ -1,3 +1,7 @@
+---
+modified: 2021-04-26T22:56:51+02:00
+---
+
 # Week 9 (starting 1.3.2021)
 
 ## Monday
@@ -13,7 +17,7 @@ PROCESSED: Collect old todos.
 - [x] plan next steps
 - [x] details mobile html
 - [x] details tabbed poc
-  Cannot be done with #anchors, since that scrolls the page. Will need to find another selector.
+  Cannot be done with anchors, since that scrolls the page. Will need to find another selector.
 - [x] details tabbed poc
   PROCESSED: Awesome design, should write a blog post about it!
 - [x] details design
