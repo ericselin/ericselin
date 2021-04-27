@@ -102,6 +102,11 @@ h6 a {
 
 a {
   color: inherit;
+  transition: color ease-in 200ms;
+}
+
+a:hover {
+  color: var(--color-accent);
 }
 
 .airy + .airy {
