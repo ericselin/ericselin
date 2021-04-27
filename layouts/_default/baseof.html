@@ -8,7 +8,9 @@
   <title>{{default site.Title .Title}} | ericselin.dev</title>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Source+Code+Pro:wght@400;700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="{{(resources.Get "style.css").RelPermalink}}" />
+  <style>
+    {{(resources.Get "style.css").Content | safeCSS}}
+  </style>
 </head>
 
 <body>
