@@ -27,6 +27,7 @@
 
   --font-text: 'Inter', sans-serif;
   --font-heading: 'Source Code Pro', monospace;
+  --font-mono: 'Source Code Pro', monospace;
 }
 
 @media (min-width: 500px) {
@@ -107,6 +108,11 @@ a {
 
 a:hover {
   color: var(--color-accent);
+}
+
+code {
+  font-family: var(--font-mono);
+  line-height: initial;
 }
 
 .airy + .airy {
