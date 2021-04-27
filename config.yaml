@@ -1,5 +1,4 @@
 title: I'm Eric, and I'm a developer
-publishDir: docs
 disableKinds:
   - taxonomy
-  - taxonomyTerm
+  - term
