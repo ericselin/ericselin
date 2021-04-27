@@ -54,9 +54,27 @@ body {
 body > header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin: var(--margin);
   color: var(--color-muted);
   font-family: var(--font-heading);
+}
+
+body > header > a {
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 2rem;
+  background: var(--color-accent);
+  width: 2rem;
+  height: 2rem;
+  line-height: 1.5rem;
+  text-align: center;
+  border-radius: 25%;
+  color: var(--color-body);
+}
+
+body > header > a:hover {
+  color: var(--color-bg);
 }
 
 body > header ul {
