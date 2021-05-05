@@ -1,3 +1,7 @@
+---
+modified: 2021-04-28T23:22:57+02:00
+---
+
 I like to code. And I like to develop new things. Most of all, I'm an
 entrepreneur at heart.
 
@@ -23,4 +27,4 @@ custom-built ecommerce solution. Official title: co-founder and CTO.
 I tried every todo app out there and finally decided to make my own that
 works the way I want. Active users: 3.
 
-[https://humla.app](humla.app)
+[humla.app](https://humla.app)
