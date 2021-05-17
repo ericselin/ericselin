@@ -1,6 +1,7 @@
 ---
-date: 2021-05-17
-title: Functions on the edge - the holy grail of web computing?
+date: 2021-05-17T00:00:00+02:00
+title: 'Servers are cool again - they''re just a bit different now'
+modified: 2021-05-17T19:04:16+02:00
 ---
 
 I don't like executing code on the client. I think it's disrespectful, wasteful, and worst of all (for your business), results in lowered performance. [I recently wrote about it on this very blog.](/blog/your-website-is-not-an-app/) But as many have pointed out, sometimes you need dynamic functionality on your site. Or maybe you need some logging / analytics. In any case, I absolutely agree that there are some very good reasons to change or react to every individual request (i.e. "page load" in a sense). This of course is not possible with a purely static site with no client-side JavaScript. So what do you do then? You execute your code on a server instead.
@@ -19,7 +20,7 @@ Right, everyone knows servers are bad. And besides, nobody has a machine in the 
 
 Anyway! To my actual point: what you should do is run your very simple and fault-tolerant code "on the edge". That means running it in every location your Content Delivery Network (CDN) has, which should be in the hundreds. And all of the orchestration should be done by your CDN - your very simple program should "just work" everywhere transparently. And it should scale basically indefinitely, without overhead. Luckily, this solution already exists. You can just upload a single JavaScript file to your CDN and have it execute on every request everywhere. It's based on the V8 JavaScript engine, which means that for every request you get a new process practically instantly (looking at you, Lambda, with your insane cold starts). And the only thing you need to worry about is your little script.
 
-These solutions are freaking awesome. You can do basically anything with them if you use your imagination. Some providers offer very simple and performant key-value stores for eventually consistent data (like the contents of a page) and even database-like always consistent records that live on the network edge (on the CDN). Cloudflare has "Workers", Akamai has "Edge Compute", and even Netlify has "Edge Handlers" (although Netlify's is still in public beta). To me, combining static files with these kinds of edge functions sounds like the holy grail of websites. I couldn't be more surprised that this amazing way of working is not talked about every damned day.
+These solutions are freaking awesome. You can do basically anything with them if you use your imagination. Some providers offer very simple and performant key-value stores for eventually consistent data (like the contents of a page) and even database-like always consistent records that live on the network edge (on the CDN). Cloudflare has "Workers", Akamai has "Edge Compute", and even Netlify has "Edge Handlers" (although Netlify's is still in public beta). To me, combining static files with these kinds of edge functions sounds like the holy grail of web computing. I couldn't be more surprised that this amazing way of working is not talked about every damned day.
 
 ## Practical example
 
