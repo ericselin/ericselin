@@ -1,10 +1,10 @@
 ---
 date: 2021-05-17T00:00:00+02:00
 title: 'Servers are cool again - they''re just a bit different now'
-modified: 2021-05-17T19:04:16+02:00
+modified: 2021-05-17T20:07:45+02:00
 ---
 
-I don't like executing code on the client. I think it's disrespectful, wasteful, and worst of all (for your business), results in lowered performance. [I recently wrote about it on this very blog.](/blog/your-website-is-not-an-app/) But as many have pointed out, sometimes you need dynamic functionality on your site. Or maybe you need some logging / analytics. In any case, I absolutely agree that there are some very good reasons to change or react to every individual request (i.e. "page load" in a sense). This of course is not possible with a purely static site with no client-side JavaScript. So what do you do then? You execute your code on a server instead.
+I don't like executing code on the client, i.e. in the user's browser. I think it's disrespectful, wasteful, and worst of all (for your business), results in lowered performance. [I recently wrote about it on this very blog.](/blog/your-website-is-not-an-app/) But as many have pointed out, sometimes you need dynamic functionality on your site. Or maybe you need some logging / analytics. In any case, I absolutely agree that there are some very good reasons to change or react to every individual request (i.e. "page load" in a sense). This of course is not possible with a purely static site with no client-side JavaScript. So what do you do then? You execute your code on a server instead.
 
 And then you say: "But Eric, you must hate servers as well - they are for sure not very static!" To which I say: "Yes, you are right, I hate servers as well." Hate is a pretty strong word here, of course. Servers are essential for everything we do, but in the context of websites, I kind of hate them. (Note that all pages are sent by servers, this page included. But this page was sent from the dumbest and simplest server possible - one that only sends raw text files over the network.) Anyway, bear with me, it's going to get clearer.
 
