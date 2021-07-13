@@ -147,6 +147,11 @@ article + article::before {
   margin: 0 auto calc(2 * var(--margin));
 }
 
+img {
+  display: block;
+  max-width: 100%;
+}
+
 .button-link {
   border: 1px solid var(--color-accent);
   border-radius: 0.5rem;
