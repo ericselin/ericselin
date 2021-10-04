@@ -20,3 +20,17 @@ Client rendering
 - paint
 - client side rendering
 - script execution
+
+Check Cloudflare blog post on performance.
+
+
+## Hur blir en nätsida till?
+
+[Intro. Allt som händer inverkar på web perf.]
+Du slår in `sida.se` i din webbläsare och någon sekund senare ser du fint designat innehåll på din skärm. Har du någonsin funderat på hur detta egentligen går till?
+
+[Setting the scene. Vad är det som är viktigt?]
+Hur länge tar olika saker?
+
+[Actions, small and large (e.g. CDN, static)]
+Vad kan man göra åt detta?
