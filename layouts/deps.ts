@@ -1,2 +1,2 @@
-export type { Component } from "https://deno.land/x/bob/mod.ts";
-export * from "https://deno.land/x/bob/mod.ts";
+export type { Component, ContentUnknown, ContentBase } from "../../src/deno-ssg-bob/mod.ts";
+export * from "../../src/deno-ssg-bob/mod.ts";
