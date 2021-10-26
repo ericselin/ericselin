@@ -1,6 +1,6 @@
 /** @jsx h */
 
-import { Component, h } from "../deps.ts";
+import { Component, h, sortDateDesc } from "../deps.ts";
 import { Base } from "../_base.tsx";
 import { Summary } from "../_summary.tsx";
 
@@ -11,7 +11,7 @@ const C: Component<any, { title: string }, { title: string }> = (
   <Base>
     <h1>{title}</h1>
     <main>
-      {wantedPages?.map((post) => <Summary post={post} />)}
+      {wantedPages?.sort(sortDateDesc).map((post) => <Summary post={post} />)}
       {content}
     </main>
   </Base>

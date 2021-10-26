@@ -3,17 +3,17 @@
 import { Component, ContentBase, h } from "./deps.ts";
 
 export const Summary: Component<{ post: ContentBase<{ title: string }> }> = (
-  { post: { filepath: { url }, title } },
+  { post: { filepath: { url }, title, date, summary } },
 ) => (
   <article>
     <header>
       <h2>
         <a href={url.pathname}>{title}</a>
       </h2>
-      <i>DATE - WORDCOUNT Words</i>
+      <i>{date && date.toDateString()}</i>
     </header>
     <p>
-      SUMMARY
+      {summary}
     </p>
     <footer>
       <a href={url.pathname}>
