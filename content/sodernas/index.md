@@ -2,7 +2,7 @@
 
 *59°55'06.2"N 23°50'01.3"E - Sjökort B632*
 
-![Sjökort](sjökort.jpg)
+![Sjökort](sjokort.jpg)
 
 ![Luftbild](aerial.jpg)
 
