@@ -1,9 +1,9 @@
 /** @jsx h */
 
-import { Component, ContentBase, h } from "./deps.ts";
+import { Component, Page, h } from "./deps.ts";
 
-export const Summary: Component<{ post: ContentBase<{ title: string }> }> = (
-  { post: { filepath: { url }, title, date, summary } },
+export const Summary: Component<{ post: Page<{ title: string }> }> = (
+  { post: { location: { url }, title, date, summary } },
 ) => (
   <article>
     <header>
