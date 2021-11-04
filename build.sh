@@ -7,16 +7,12 @@ if [ -z "$BOB_VERSION" ]; then
   exit 1
 fi
 
-# Add deno bin to PATH, just in case.
-# This will be used both by the Deno installer (as per the default),
-# and as the install location for bob
-PATH="$HOME/.deno/bin:$PATH"
-
 # Install Deno if not already installed
-deno --version || curl -fsSL https://deno.land/x/install/install.sh | sh
-
-# Install bob (will not overwrite existing installation)
-deno install -A "https://deno.land/x/bob@v$BOB_VERSION/cli.ts"
+if ! deno --version; then
+  curl -fsSL https://deno.land/x/install/install.sh | sh
+# Add default deno bin folder to PATH
+  PATH="$HOME/.deno/bin:$PATH"
+fi
 
 # Force-build site
-bob -f
+deno run -A "https://deno.land/x/bob@v$BOB_VERSION/cli.ts" -f
