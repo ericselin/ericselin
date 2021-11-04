@@ -14,5 +14,5 @@ if ! deno --version; then
   PATH="$HOME/.deno/bin:$PATH"
 fi
 
-# Force-build site
-deno run -A "https://deno.land/x/bob@v$BOB_VERSION/cli.ts" -f
+# Build site
+deno run -A "https://deno.land/x/bob@v$BOB_VERSION/cli.ts" $BOB_OPTIONS
