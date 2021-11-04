@@ -1,2 +1,1 @@
-export type { Component, Page } from "../../src/deno-ssg-bob/mod.ts";
-export * from "../../src/deno-ssg-bob/mod.ts";
+export * from "https://deno.land/x/bob@v2.0.1/mod.ts";
