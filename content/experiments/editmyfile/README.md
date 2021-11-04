@@ -1,8 +1,3 @@
----
-tags: experiment
-layout: default.hbs
----
-
 # Simple text editor
 
 This is a test of the Filesystem API. It's a very simple text editor. Use at your own risk... 😏
