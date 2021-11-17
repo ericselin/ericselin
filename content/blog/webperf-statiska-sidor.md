@@ -16,8 +16,6 @@ Ja, kanske vissa problem nu och då. Men det behöver inte vara så. Tänk om di
 
 ## Vad är en statisk sida?
 
-- simplicity - in prod
-
 En statisk sida är en sida som har genererats på förhand till en textfil som webbläsare förstår (färdig HTML). Ingen server behövs, inte heller någon databas, det enda som behövs är att skicka den färdiga textfilen till användaren. [...]
 
 Jämför detta med en "dynamisk" sida som genereras av en server. Varje gång en användare vill se en viss sida genereras den pånytt av servern. Detta innebär även att den underliggande databasen ska läsas vid varje sidvisning, eftersom själva innehållet oftast ligger i en databas. [...]
