@@ -1,0 +1,12 @@
+compatibility_date = "2021-11-19"
+
+type = "javascript"
+name = "edge-components"
+account_id = "a5407b781bec5a58294d3dcaa2c18806"
+zone_id = "8fe9d796fe934f6a9f6e29b730631163"
+route = "ericselin.dev/experiments/edge-components*"
+
+[build.upload]
+format = "modules"
+dir = "worker"
+main = "./main.mjs"
