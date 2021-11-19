@@ -1,7 +1,7 @@
-const Component = (props, ctx) => `<h1>${props.title}</h1><p>Hello, user from ${ctx.country}!</p>`
+const Country = (props, ctx) => `<h1>${props.title}</h1><p>Hello, user from ${ctx.country}!</p>`
 
 const components = {
-  Component
+  Country
 };
 
 const rewriter = (req) => ({
@@ -23,8 +23,8 @@ const rewriter = (req) => ({
   }
 });
 
-const handler = (request) => {
-  const res = fetch(request);
+const handler = async (request) => {
+  const res = await fetch(request);
   return new HTMLRewriter().on("edge-component", rewriter(request)).transform(res);
 }
 
