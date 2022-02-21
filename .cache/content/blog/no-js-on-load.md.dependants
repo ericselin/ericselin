@@ -1,0 +1,8 @@
+{
+  "content/blog/index.md": {
+    "location": "[object]",
+    "date": "[object]",
+    "title": "New rule: no JavaScript on page load",
+    "summary": "Client-side JavaScript (computing things in the web browser) is getting pretty darn awesome for creating apps out of web pages. You can do almost anything in the browser nowadays, such as video conferencing, 3D modeling, local file editing, even hardware I/O interaction, and much more. But since your website is not an app, you really do not need or want to execute tons of JavaScript when your page loads."
+  }
+}

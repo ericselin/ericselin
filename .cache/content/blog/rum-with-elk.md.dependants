@@ -1,0 +1,8 @@
+{
+  "content/blog/index.md": {
+    "location": "[object]",
+    "date": "[object]",
+    "title": "Web vitals real user monitoring with Elasticsearch and Kibana",
+    "summary": "Elasticsearch is awesome. I had it on my &quot;things to learn&quot; list for quite a while, and I finally got to it when an ecommerce site I&#39;m working on needed some real user monitoring (RUM) to make sure performance stays superb. This is the story of how easy this was to set up with Elasticsearch and Kibana (ELK - or at least EK). Web vitals is a term for some new metrics surrounding site usability."
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "content/blog/index.md": {
+    "location": "[object]",
+    "date": "[object]",
+    "title": "Functional JavaScript with promises",
+    "summary": "Functional programming is awesome. It makes code easy to reason about and easy to test. It promotes the use of good code structuring. Unfortunately for web developers, JavaScript is not functional. The pipeline operator proposal would bring a little bit of functionality, but it is far from here."
+  }
+}

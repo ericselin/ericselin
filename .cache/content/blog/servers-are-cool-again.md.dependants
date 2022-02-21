@@ -1,0 +1,8 @@
+{
+  "content/blog/index.md": {
+    "location": "[object]",
+    "date": "[object]",
+    "title": "Servers are cool again - they're just a bit different now",
+    "summary": "I don&#39;t like executing code on the client, i.e. in the user&#39;s browser. I think it&#39;s disrespectful, wasteful, and worst of all (for your business), results in lowered performance. I recently wrote about it on this very blog. But as many have pointed out, sometimes you need dynamic functionality on your site. Or maybe you need some logging / analytics."
+  }
+}

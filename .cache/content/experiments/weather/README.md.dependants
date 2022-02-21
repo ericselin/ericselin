@@ -1,0 +1,6 @@
+{
+  "content/experiments/index.md": {
+    "location": "[object]",
+    "content": "<h1 id=\"pwa-weather-app\">PWA Weather App</h1>\n<p>An installable PWA that shows todays weather compared to yesterday.</p>\n"
+  }
+}

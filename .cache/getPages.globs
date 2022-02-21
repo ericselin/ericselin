@@ -1,0 +1,8 @@
+{
+  "content/blog/index.md": [
+    "content/blog/*.md"
+  ],
+  "content/experiments/index.md": [
+    "content/experiments/*/README.md"
+  ]
+}

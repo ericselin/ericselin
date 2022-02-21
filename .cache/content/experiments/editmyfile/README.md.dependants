@@ -1,0 +1,6 @@
+{
+  "content/experiments/index.md": {
+    "location": "[object]",
+    "content": "<h1 id=\"simple-text-editor\">Simple text editor</h1>\n<p>This is a test of the Filesystem API. It&#39;s a very simple text editor. Use at your own risk... 😏</p>\n<p>The Filesystem API is freaking amazing. With it you can magically open <em>local</em> files and also save them back! \nThe API is in &quot;Origin trial&quot; from Chrome 78 onwards, and available as a flag in previous versions.</p>\n<p>The API is pretty damn cool, if you ask me. This is a quite nice looking text editor with a contenteditable\n<code>pre</code> tag, and the code is not many lines long. Soon the days of native desktop apps are over! 😝</p>\n<h2 id=\"technologies-used\">Technologies used</h2>\n\n<ul>\n<li>Filesystem API</li>\n</ul>\n<h2 id=\"see-more\">See more</h2>\n<p><a href=\"https://developers.google.com/web/updates/2019/08/native-file-system\">Google developers post</a></p>\n"
+  }
+}

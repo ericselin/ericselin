@@ -129,6 +129,20 @@ a:hover {
   color: var(--color-accent);
 }
 
+blockquote {
+  border: 1px solid var(--color-accent);
+  margin: 0;
+  padding: var(--margin);
+}
+
+blockquote *:first-child {
+  margin-top: 0;
+}
+
+blockquote *:last-child {
+  margin-bottom: 0;
+}
+
 pre {
   max-width: 100%;
   display: block;

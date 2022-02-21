@@ -1,0 +1,6 @@
+{
+  "content/experiments/index.md": {
+    "location": "[object]",
+    "content": "<h1 id=\"google-cast-demo\">Google Cast demo</h1>\n<p>Google Cast is pretty cool. Especially Chromecast, of course. You can cast pretty much any media \non this super cheap device. But even better, you can build your own apps that run on the Chromecast.</p>\n<p>To build an app, you need to create:</p>\n\n<ul>\n<li>A &quot;sender&quot; app which controls the casting</li>\n<li>A &quot;receiver&quot; app that runs on the Chromecast</li>\n</ul>\n<p>Also, to test all of this in development, you need to register your device for development (super easy!).</p>\n<p><a href=\"https://developers.google.com/cast/docs/developers\">Docs</a></p>\n"
+  }
+}

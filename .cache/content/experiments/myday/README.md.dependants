@@ -1,0 +1,6 @@
+{
+  "content/experiments/index.md": {
+    "location": "[object]",
+    "content": "<h1 id=\"myday\">Myday</h1>\n<p>See your Google calendar events for today.</p>\n<p><a href=\"https://myday.ericselin.dev\">Working domain</a></p>\n<h2 id=\"requirements\">Requirements</h2>\n\n<ul>\n<li>Google Cloud Platform project with Calendar API enabled</li>\n<li>API key and OAuth client for the project</li>\n<li>Private top-level domain for hosting (see note below)</li>\n</ul>\n<p>Note: You need to authorize the OAuth client for a particular URL.\nThis URL needs to be on a whitelisted domain, which in turn needs\nto be a private top-level domain.</p>\n<p>This project also showcases using Google Sign-In to request for\nadditional permissions on demand (incremental authorization). Note\nthat it&#39;s apparently not possible to bypass the account selection\nwhen doing this.</p>\n<p><strong>The Calendar API is restricted and requires validation by Google\nbefore usage. It still works without validation, but shows a very\nscary warning.</strong></p>\n<p><a href=\"https://developers.google.com/calendar/quickstart/js\">Quick start docs</a></p>\n"
+  }
+}
