@@ -26,9 +26,9 @@
   --color-muted: var(--nord4);
   --color-accent: var(--nord8);
 
-  --font-text: 'Inter', sans-serif;
-  --font-heading: 'Source Code Pro', monospace;
-  --font-mono: 'Source Code Pro', monospace;
+  --font-text: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;
+  --font-heading: var(--font-mono);
+  --font-mono: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
 }
 
 @media (min-width: 500px) {
@@ -67,7 +67,7 @@ body > header > a {
   background: var(--color-accent);
   width: 2rem;
   height: 2rem;
-  line-height: 1.5rem;
+  line-height: 2rem;
   text-align: center;
   border-radius: 25%;
   color: var(--color-body);

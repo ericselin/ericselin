@@ -11,12 +11,11 @@ export const Base: Component = async (
       <meta charSet="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-      <title>{(page.frontmatter as any).title || "I'm Eric, and I'm a developer"} | ericselin.dev</title>
-      <link rel="preconnect" href="https://fonts.gstatic.com" />
-      <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Source+Code+Pro:wght@400;700;900&display=swap"
-        rel="stylesheet"
-      />
+      <title>
+        {page.title || "I'm Eric, and I'm a developer"}
+        {" "}
+        | ericselin.dev
+      </title>
       <style>
         {await readContents(needsCss)}
       </style>
