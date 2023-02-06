@@ -1,0 +1,6 @@
+image: denoland/deno:1.26.1
+command: deno run -A https://deno.land/x/bob@v2.2.0/cli.ts
+public: public
+domains:
+  - ericselin.dev
+  - www.ericselin.dev
