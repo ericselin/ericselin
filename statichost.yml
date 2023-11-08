@@ -1,5 +1,5 @@
-image: denoland/deno:1.26.1
-command: deno run -A https://deno.land/x/bob@v2.2.0/cli.ts
+image: hugomods/hugo:reg-base-0.120.3
+command: hugo
 public: public
 domains:
   - ericselin.dev
