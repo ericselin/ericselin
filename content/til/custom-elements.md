@@ -1,5 +1,5 @@
 ---
-date: 1.6.2021
+date: 2021-06-01
 title: Gotchas when using custom elements in production
 tags:
   - custom-elements
