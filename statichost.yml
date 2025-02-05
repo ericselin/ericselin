@@ -1,6 +1,7 @@
-# image: hugomods/hugo:reg-base-0.120.3
-# command: hugo
-# public: public
+image: hugomods/hugo:reg-base-0.141.3
+command: build
+public: public
+image_entrypoint: true
 domains:
   - ericselin.dev
   - www.ericselin.dev
